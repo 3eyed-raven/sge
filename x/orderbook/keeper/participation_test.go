@@ -18,7 +18,7 @@ import (
 )
 
 func createNParticipation(
-	tApp *simappUtil.TestApp,
+	_ *simappUtil.TestApp,
 	keeper *keeper.KeeperTest,
 	ctx sdk.Context,
 	n int,
@@ -45,7 +45,7 @@ func createNParticipation(
 
 func createTestMarket(
 	tApp *simappUtil.TestApp,
-	keeper *keeper.KeeperTest,
+	_ *keeper.KeeperTest,
 	ctx sdk.Context,
 	marketUID string,
 	status markettypes.MarketStatus,
