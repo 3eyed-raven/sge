@@ -1,0 +1,18 @@
+version = 1
+
+test_patterns = [
+  "**/*_test.go",
+  "testutil/*"
+]
+
+[[analyzers]]
+name = "go"
+
+  [analyzers.meta]
+  import_root = "github.com/3eyedraga/sge"
+
+[[transformers]]
+name = "gofmt"
+
+[[transformers]]
+name = "gofumpt"
