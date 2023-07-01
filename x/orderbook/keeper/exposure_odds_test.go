@@ -13,7 +13,7 @@ import (
 )
 
 func createNOrderBookOddsExposure(
-	tApp *simappUtil.TestApp,
+	_ *simappUtil.TestApp,
 	keeper *keeper.KeeperTest,
 	ctx sdk.Context,
 	n int,
