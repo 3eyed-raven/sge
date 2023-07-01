@@ -5,17 +5,20 @@ package types
 
 import (
 	fmt "fmt"
-	_ "github.com/cosmos/gogoproto/gogoproto"
-	proto "github.com/gogo/protobuf/proto"
 	io "io"
 	math "math"
 	math_bits "math/bits"
+
+	_ "github.com/cosmos/gogoproto/gogoproto"
+	proto "github.com/gogo/protobuf/proto"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
-var _ = fmt.Errorf
-var _ = math.Inf
+var (
+	_ = proto.Marshal
+	_ = fmt.Errorf
+	_ = math.Inf
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the proto package it is being compiled against.
@@ -47,9 +50,11 @@ func (*MarketAddTicketPayload) ProtoMessage()    {}
 func (*MarketAddTicketPayload) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1dc46cd902954700, []int{0}
 }
+
 func (m *MarketAddTicketPayload) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
+
 func (m *MarketAddTicketPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
 		return xxx_messageInfo_MarketAddTicketPayload.Marshal(b, m, deterministic)
@@ -62,12 +67,15 @@ func (m *MarketAddTicketPayload) XXX_Marshal(b []byte, deterministic bool) ([]by
 		return b[:n], nil
 	}
 }
+
 func (m *MarketAddTicketPayload) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_MarketAddTicketPayload.Merge(m, src)
 }
+
 func (m *MarketAddTicketPayload) XXX_Size() int {
 	return m.Size()
 }
+
 func (m *MarketAddTicketPayload) XXX_DiscardUnknown() {
 	xxx_messageInfo_MarketAddTicketPayload.DiscardUnknown(m)
 }
@@ -141,9 +149,11 @@ func (*MarketUpdateTicketPayload) ProtoMessage()    {}
 func (*MarketUpdateTicketPayload) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1dc46cd902954700, []int{1}
 }
+
 func (m *MarketUpdateTicketPayload) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
+
 func (m *MarketUpdateTicketPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
 		return xxx_messageInfo_MarketUpdateTicketPayload.Marshal(b, m, deterministic)
@@ -156,12 +166,15 @@ func (m *MarketUpdateTicketPayload) XXX_Marshal(b []byte, deterministic bool) ([
 		return b[:n], nil
 	}
 }
+
 func (m *MarketUpdateTicketPayload) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_MarketUpdateTicketPayload.Merge(m, src)
 }
+
 func (m *MarketUpdateTicketPayload) XXX_Size() int {
 	return m.Size()
 }
+
 func (m *MarketUpdateTicketPayload) XXX_DiscardUnknown() {
 	xxx_messageInfo_MarketUpdateTicketPayload.DiscardUnknown(m)
 }
@@ -216,9 +229,11 @@ func (*MarketResolutionTicketPayload) ProtoMessage()    {}
 func (*MarketResolutionTicketPayload) Descriptor() ([]byte, []int) {
 	return fileDescriptor_1dc46cd902954700, []int{2}
 }
+
 func (m *MarketResolutionTicketPayload) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
+
 func (m *MarketResolutionTicketPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
 		return xxx_messageInfo_MarketResolutionTicketPayload.Marshal(b, m, deterministic)
@@ -231,12 +246,15 @@ func (m *MarketResolutionTicketPayload) XXX_Marshal(b []byte, deterministic bool
 		return b[:n], nil
 	}
 }
+
 func (m *MarketResolutionTicketPayload) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_MarketResolutionTicketPayload.Merge(m, src)
 }
+
 func (m *MarketResolutionTicketPayload) XXX_Size() int {
 	return m.Size()
 }
+
 func (m *MarketResolutionTicketPayload) XXX_DiscardUnknown() {
 	xxx_messageInfo_MarketResolutionTicketPayload.DiscardUnknown(m)
 }
@@ -490,6 +508,7 @@ func encodeVarintTicket(dAtA []byte, offset int, v uint64) int {
 	dAtA[offset] = uint8(v)
 	return base
 }
+
 func (m *MarketAddTicketPayload) Size() (n int) {
 	if m == nil {
 		return 0
@@ -576,9 +595,11 @@ func (m *MarketResolutionTicketPayload) Size() (n int) {
 func sovTicket(x uint64) (n int) {
 	return (math_bits.Len64(x|1) + 6) / 7
 }
+
 func sozTicket(x uint64) (n int) {
 	return sovTicket(uint64((x << 1) ^ uint64((int64(x) >> 63))))
 }
+
 func (m *MarketAddTicketPayload) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
@@ -816,6 +837,7 @@ func (m *MarketAddTicketPayload) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
+
 func (m *MarketUpdateTicketPayload) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
@@ -955,6 +977,7 @@ func (m *MarketUpdateTicketPayload) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
+
 func (m *MarketResolutionTicketPayload) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
@@ -1107,6 +1130,7 @@ func (m *MarketResolutionTicketPayload) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
+
 func skipTicket(dAtA []byte) (n int, err error) {
 	l := len(dAtA)
 	iNdEx := 0
